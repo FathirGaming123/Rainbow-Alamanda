@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rainbow Alamanda</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<style>
+body { scroll-behavior: smooth; }
+</style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+<!-- NAVBAR -->
+<nav class="fixed w-full bg-white shadow z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+    <h1 class="font-bold text-xl text-pink-500">🌈 Rainbow Alamanda</h1>
+    <div class="space-x-4 hidden md:block">
+      <a href="#home">Home</a>
+      <a href="#about">Tentang</a>
+      <a href="#wahana">Wahana</a>
+      <a href="#gallery">Galeri</a>
+      <a href="#review">Review</a>
+      <a href="#booking">Booking</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="h-screen flex items-center justify-center bg-gradient-to-r from-pink-400 to-cyan-400 text-white text-center">
+  <div>
+    <h1 class="text-5xl font-bold mb-4">Rainbow Alamanda</h1>
+    <p class="mb-6">Wisata keluarga modern & instagramable</p>
+    <a href="#booking" class="bg-white text-pink-500 px-6 py-3 rounded-full font-semibold">Booking Sekarang</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="max-w-7xl mx-auto p-6">
+  <h2 class="text-3xl font-bold mb-4">Tentang</h2>
+  <p>Tempat wisata keluarga dengan lampu warna-warni, wahana seru, dan spot foto kekinian.</p>
+</section>
+
+<!-- WAHANA -->
+<section id="wahana" class="bg-white p-6">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-6">
+    <div class="p-6 shadow rounded-xl">🎢 Rainbow Slide</div>
+    <div class="p-6 shadow rounded-xl">🏎️ Gokart</div>
+    <div class="p-6 shadow rounded-xl">🚗 Bumper Car</div>
+    <div class="p-6 shadow rounded-xl">🎈 Istana Balon</div>
+    <div class="p-6 shadow rounded-xl">🤸 Trampoline</div>
+    <div class="p-6 shadow rounded-xl">🚲 Sepeda Mini</div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="max-w-7xl mx-auto p-6">
+  <h2 class="text-3xl font-bold mb-6">Galeri</h2>
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://images.unsplash.com/photo-1772351232799-4c46d910b92b?q=80&w=775&auto=format&fit=crop" class="rounded-xl w-full">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://images.unsplash.com/photo-1772351604985-24baf42d2712?q=80&w=785&auto=format&fit=crop" class="rounded-xl w-full">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://images.unsplash.com/photo-1772358149298-96fbd19c16c4?q=80&w=776&auto=format&fit=crop" class="rounded-xl w-full">
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+
+<!-- REVIEW -->
+<section id="review" class="bg-gray-200 p-6">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6">Review Pengunjung</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white p-4 rounded-xl shadow">⭐⭐⭐⭐⭐<br>🗣️"Tempatnya bagus banget!"</div>
+      <div class="bg-white p-4 rounded-xl shadow">⭐⭐⭐⭐⭐<br>🗣️"Anak-anak suka banget!"</div>
+      <div class="bg-white p-4 rounded-xl shadow">⭐⭐⭐⭐⭐<br>🗣️"Tempatnya cocok banget buat foto-foto"</div>
+      <div class="bg-white p-4 rounded-xl shadow">⭐⭐⭐⭐⭐<br>🗣️"Tempatnya sangat bersih dan nyaman"</div>
+      <div class="bg-white p-4 rounded-xl shadow">⭐⭐⭐⭐⭐<br>🗣️"Pelayananya sangat ramah & bagus"</div>
+      <div class="bg-white p-4 rounded-xl shadow">⭐⭐⭐⭐⭐<br>🗣️"Permainanya sangat banyak sekali"</div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking" class="p-6">
+  <div class="max-w-xl mx-auto bg-white p-6 rounded-xl shadow">
+    <h2 class="text-2xl font-bold mb-4">Booking Tiket</h2>
+
+    <form onsubmit="submitForm(event)">
+      <input id="nama" type="text" placeholder="Nama" class="w-full mb-3 p-2 border rounded" required>
+      <input id="jumlah" type="number" placeholder="Jumlah Tiket" class="w-full mb-3 p-2 border rounded" required>
+      <input id="telepon" type="tel" placeholder="Masukkan Nomor Anda" class="w-full mb-3 p-2 border rounded" required>
+      <input id="tanggal" type="date" class="w-full mb-3 p-2 border rounded" required>
+
+      <button type="submit" class="w-full bg-pink-500 text-white p-2 rounded">
+        Pesan Sekarang
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="p-6">
+  <div class="max-w-7xl mx-auto">
+    <iframe class="w-full h-96 rounded-xl"
+      src="https://maps.google.com/maps?q=Rainbow%20Alamanda&output=embed">
+    </iframe>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black text-white text-center p-4">
+  © 2026 Rainbow Alamanda
+</footer>
+
+<!-- SCRIPT -->
+<script>
+new Swiper('.mySwiper', {
+  loop: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+});
+
+function submitForm(e){
+  e.preventDefault();
+
+  const nama = document.getElementById("nama").value;
+  const jumlah = document.getElementById("jumlah").value;
+  const telepon = document.getElementById("telepon").value;
+  const tanggal = document.getElementById("tanggal").value;
+
+  const nomorPemilik = "6282156013095"; // format internasional
+
+  const pesan = `Halo minn Rainbow Alamanda 👋
+Saya ingin membooking tiket dengan detail berikut:
+
+Nama: ${nama}
+Jumlah Tiket: ${jumlah}
+No HP: ${telepon}
+Tanggal: ${tanggal}
+
+Mohon untuk di konfirmasi ya minn 😊`;
+
+  const url = `https://wa.me/${nomorPemilik}?text=${encodeURIComponent(pesan)}`;
+
+  window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
